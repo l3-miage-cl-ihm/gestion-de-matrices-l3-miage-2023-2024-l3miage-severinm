@@ -1,3 +1,16 @@
 <h1>L3M 2023-2024 : Matrices</h1>
 
-à compléter...
+<label>l1 </label>
+<input #inputL1 type="number" [value]="sigL1()" (change)="sigL1.set(+inputL1.value)">
+<label> h1 </label>
+<input #inputH1 type="number" [value]="sigH1()" (change)="sigH1.set(+inputH1.value)">
+<label> l2 </label>
+<input #inputL2 type="number" [value]="sigL2()" (change)="sigL2.set(+inputL2.value)">
+<label> h2 </label>
+<input #inputH2 type="number" [value]="sigH2()" (change)="sigH2.set(+inputH2.value)">
+
+<pre>l1 = {{sigL1()}} h1 = {{sigH1()}}</pre>
+<pre>l2 = {{sigL2()}} h2 = {{sigH2()}}</pre>
+
+<pre>{{sigM1() | json}}</pre>
+<pre>{{sigM2() | json}}</pre>
