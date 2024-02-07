@@ -7,7 +7,14 @@ import { Matrix, initMatrixIntRandom, addIntMatrixes, multiplyIntMatrixes } from
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-// Correction avec des génériques, pour les étufiant, l'utilisation de number est suffisante...
-export class AppComponent<L1 extends number, H1 extends number, L2 extends number, H2 extends number> {
-  // à compléter
+
+export class AppComponent {
+  
+  readonly sigL1 = signal<number>(5);
+  readonly sigH1 = signal<number>(5);
+  readonly sigM1 = computed<Matrix<number, number, number>>(() => initMatrixIntRandom<number, number>(this.sigH1(), this.sigL1()));
+
+  readonly sigL2 = signal<number>(10);
+  readonly sigH2 = signal<number>(10);
+  readonly sigM2 = computed<Matrix<number, number, number>>(() => initMatrixIntRandom<number, number>(this.sigH2(), this.sigL2()));
 }
