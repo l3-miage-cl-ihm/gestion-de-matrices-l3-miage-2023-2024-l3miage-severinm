@@ -1,0 +1,5 @@
+<table class="matrix">
+    <tr *ngFor="let i of range(matrix.length)">
+        <td *ngFor="let v of getMatrixLine(matrix, i)">{{ v }}</td>
+    </tr>
+</table>

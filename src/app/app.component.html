@@ -12,5 +12,6 @@
 <pre>l1 = {{sigL1()}} h1 = {{sigH1()}}</pre>
 <pre>l2 = {{sigL2()}} h2 = {{sigH2()}}</pre>
 
-<pre>{{sigM1() | json}}</pre>
-<pre>{{sigM2() | json}}</pre>
+<app-matrix [matrix]="sigM1()"></app-matrix>
+<br>
+<app-matrix [matrix]="sigM2()"></app-matrix>
