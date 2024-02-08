@@ -12,10 +12,24 @@
 <pre>l1 = {{sigL1()}} h1 = {{sigH1()}}</pre>
 <pre>l2 = {{sigL2()}} h2 = {{sigH2()}}</pre>
 
-<app-matrix [matrix]="sigM1()"></app-matrix>
+<app-matrix 
+    [matrix]="sigM1()"
+    [highlight]="sigHhilightInM1()">
+</app-matrix>
 <br>
-<app-matrix [matrix]="sigM2()"></app-matrix>
+<app-matrix 
+    [matrix]="sigM2()"
+    [highlight]="sigHhilightInM2()">
+</app-matrix>
 <br>
-<app-matrix [matrix]="sigM1plusM2()"></app-matrix>
+<app-matrix 
+    [matrix]="sigM1plusM2()" 
+    [highlight]="sigHhilightInM1plusM2()" 
+    (pointerOver)="overM1plusM2($event)">
+</app-matrix>
 <br>
-<app-matrix [matrix]="sigM1xM2()"></app-matrix>
+<app-matrix 
+    [matrix]="sigM1xM2()"
+    [highlight]="sigHhilightInM1xM2()" 
+    (pointerOver)="overM1xM2($event)">
+</app-matrix>
