@@ -1,0 +1,10 @@
+<table class="matrix">
+    <tr *ngFor="let i of range(matrix.length)">
+        <td 
+        *ngFor="let v of getMatrixLine(matrix, i); index as j" 
+        (pointerenter)="pointerOver.emit([i, j])" 
+        (pointerleave)="pointerOver.emit(undefined)"
+        [class.highlight]="highlight !== undefined && isHighlighted(i, j)"
+        >{{ v }}</td>
+    </tr>
+</table>

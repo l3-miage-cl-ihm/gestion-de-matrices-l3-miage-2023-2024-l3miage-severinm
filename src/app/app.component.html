@@ -1,3 +1,47 @@
 <h1>L3M 2023-2024 : Matrices</h1>
 
-à compléter...
+<label>L1 </label>
+<input #inputL1 type="number" [value]="sigL1()" (change)="sigL1.set(+inputL1.value)">
+<label> H1 </label>
+<input #inputH1 type="number" [value]="sigH1()" (change)="sigH1.set(+inputH1.value)">
+
+<br>
+
+<label> L2 </label>
+<input #inputL2 type="number" [value]="sigL2()" (change)="sigL2.set(+inputL2.value)">
+<label> H2 </label>
+<input #inputH2 type="number" [value]="sigH2()" (change)="sigH2.set(+inputH2.value)">
+
+<br>
+
+<label>M1 </label>
+<app-matrix 
+    [matrix]="sigM1()"
+    [highlight]="sigHhilightInM1()">
+</app-matrix>
+
+<br>
+
+<label>M2 </label>
+<app-matrix 
+    [matrix]="sigM2()"
+    [highlight]="sigHhilightInM2()">
+</app-matrix>
+
+<br>
+
+<label>M1 + M2 </label>
+<app-matrix 
+    [matrix]="sigM1plusM2()" 
+    [highlight]="sigHhilightInM1plusM2()" 
+    (pointerOver)="overM1plusM2($event)">
+</app-matrix>
+
+<br>
+
+<label>M1 x M2 </label>
+<app-matrix 
+    [matrix]="sigM1xM2()"
+    [highlight]="sigHhilightInM1xM2()" 
+    (pointerOver)="overM1xM2($event)">
+</app-matrix>
