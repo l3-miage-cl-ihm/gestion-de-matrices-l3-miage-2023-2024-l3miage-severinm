@@ -17,4 +17,7 @@ export class AppComponent {
   readonly sigL2 = signal<number>(10);
   readonly sigH2 = signal<number>(10);
   readonly sigM2 = computed<Matrix<number, number, number>>(() => initMatrixIntRandom<number, number>(this.sigH2(), this.sigL2()));
+
+  readonly sigM1plusM2 = computed<Matrix<number, number, number>>(() => addIntMatrixes(this.sigM1(), this.sigM2()));
+  readonly sigM1xM2 = computed<Matrix<number, number, number>>(() => multiplyIntMatrixes(this.sigM1(), this.sigM2()));
 }
